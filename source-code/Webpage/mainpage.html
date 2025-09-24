@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="/CS15Laboratory/source-code/StyleSheet/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/dark.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace.js"></script>
+    <script defer src="/CS15Laboratory/source-code/JavaScript/mainpageFunctions.js"></script>
+    <script defer src="/CS15Laboratory/source-code/JavaScript/logoutFunctions.js"></script>
+</head>
+<body>
+  <div class="content" style="height: 100vh; width: 100vw; display: flex; justify-content: center; align-items: center;">
+    <nav class="sl-theme-dark">
+      <div style="border: solid var(--sl-input-border-width) var(--sl-input-border-color); border-radius: 10px; padding: 20px; width: 100%; max-width: 700px;">
+        
+        <!-- Title -->
+        <label style="display: flex; justify-content: center; width: 100%; padding-bottom: 20px; font-weight: 600; font-size: 22px">
+            Credentials
+        </label>
+
+        <!-- Form Grid -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding-bottom: 15px;">
+
+            <!-- Full Name -->
+            <sl-input id="fullname" name="fullname" placeholder="Full Name" required readonly>
+                <sl-icon name="person" slot="prefix"></sl-icon>
+            </sl-input>
+
+            <!-- Email -->
+            <sl-input id="email" type="email" name="email" placeholder="Email Address" required readonly>
+                <sl-icon name="envelope" slot="prefix"></sl-icon>
+            </sl-input>
+
+            <!-- Username -->
+            <sl-input id="username" name="username" placeholder="Username" required readonly>
+                <sl-icon name="person-circle" slot="prefix"></sl-icon>
+            </sl-input>
+
+            <!-- Country -->
+            <sl-input id="country" placeholder="Select a country" style="width: 300px;" required readonly>
+                <sl-icon name="globe" slot="prefix"></sl-icon>
+            </sl-input>
+
+            <!-- Account Created At -->
+            <sl-input id="created_at" type="text" name="created_at" placeholder="Account Created At" style="width: 300px;" required readonly>
+                <sl-icon name="calendar" slot="prefix"></sl-icon>
+            </sl-input>
+
+            <!-- Gender -->
+            <sl-input id="gender" type="text" name="gender" placeholder="Gender" style="width: 300px;" required readonly>
+                <sl-icon name="people" slot="prefix"></sl-icon>
+            </sl-input>
+        </div>
+
+        <!-- Hashed Password -->
+        <sl-input id="hashed_password" type="text" name="password" placeholder="Hashed Password" style="width: 615px;" required readonly>
+            <sl-icon name="key" slot="prefix"></sl-icon>
+        </sl-input>
+
+        <!-- Hobbies (Bullet Points) -->
+        <div style="margin-top: 15px;">
+            <label style="font-weight: 500;">Hobbies:</label>
+            <ul id="hobbies" style="padding-left: 20px; margin-top: 5px; color: var(--sl-color-white-100);">
+                <!-- JS will populate hobbies here as <li> items -->
+            </ul>
+        </div>
+        
+        <!-- Logout Button -->
+        <div style="display: flex; justify-content: center; align-items: center; padding-top: 20px;">
+            <sl-button id="logout_button" type="button" variant="primary">Logout</sl-button>
+        </div>
+      </div>
+    </nav>
+  </div>
+</body>
+</html>

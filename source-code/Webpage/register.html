@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/CS15Laboratory/source-code/StyleSheet/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/dark.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace.js"></script>
+    <script src="/CS15Laboratory/source-code/JavaScript/registerFunctions.js"></script>
+</head>
+<body>
+  <div class="content" style="height: 100vh; width: 100vw; display: flex; justify-content: center; align-items: center;">
+    <nav class="sl-theme-dark">
+      <div style="border: solid var(--sl-input-border-width) var(--sl-input-border-color); border-radius: 10px; padding: 20px; width: 100%; max-width: 700px;">
+        
+        <!-- Title -->
+        <label style="display: flex; justify-content: center; width: 100%; padding-bottom: 20px; font-weight: 600; font-size: 22px">
+            Register
+        </label>
+
+        <!-- Form Grid -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+
+            <!-- Full Name -->
+            <sl-input id="fullname" name="fullname" placeholder="Full Name" required clearable>
+                <sl-icon name="person" slot="prefix"></sl-icon>
+            </sl-input>
+
+            <!-- Email -->
+            <sl-input id="email" type="email" name="email" placeholder="Email Address" required clearable>
+                <sl-icon name="envelope" slot="prefix"></sl-icon>
+            </sl-input>
+
+            <!-- Username -->
+            <sl-input id="username" name="username" placeholder="Username" required clearable>
+                <sl-icon name="person-circle" slot="prefix"></sl-icon>
+            </sl-input>
+
+            <!-- Country -->
+            <sl-select id="country" placeholder="Select a country" style="width: 300px;" required clearable>
+                <sl-icon name="globe" slot="prefix"></sl-icon>
+                <sl-option value="ph">Philippines</sl-option>
+                <sl-option value="us">United States</sl-option>
+                <sl-option value="jp">Japan</sl-option>
+                <sl-option value="de">Germany</sl-option>
+            </sl-select>
+
+            <!-- Password -->
+            <sl-input id="password" type="password" name="password" placeholder="Password" style="width: 300px;" required clearable password-toggle>
+                <sl-icon name="key" slot="prefix"></sl-icon>
+            </sl-input>
+
+            <!-- Confirm Password -->
+            <sl-input id="confirm_password" type="password" name="confirm_password" placeholder="Confirm Password" style="width: 300px;" required clearable password-toggle>
+                <sl-icon name="shield-lock" slot="prefix"></sl-icon>
+            </sl-input>
+
+        </div>
+
+        <!-- Gender -->
+        <div style="margin-top: 15px;">
+            <label style="font-weight: 500;">Gender:</label>
+            <sl-radio-group id="gender" name="gender" style="display: flex; gap: 20px; padding-top: 5px;">
+                <sl-radio value="male">Male</sl-radio>
+                <sl-radio value="female">Female</sl-radio>
+                <sl-radio value="other">Other</sl-radio>
+            </sl-radio-group>
+        </div>
+
+        <!-- Hobbies -->
+        <div style="margin-top: 15px;">
+            <label style="font-weight: 500;">Hobbies:</label>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; padding-top: 5px;">
+                <sl-checkbox id="hobby_music" value="music">Music</sl-checkbox>
+                <sl-checkbox id="hobby_sports" value="sports">Sports</sl-checkbox>
+                <sl-checkbox id="hobby_reading" value="reading">Reading</sl-checkbox>
+                <sl-checkbox id="hobby_gaming" value="gaming">Gaming</sl-checkbox>
+            </div>
+        </div>
+
+        <!-- Submit -->
+        <div style="display: flex; justify-content: center; align-items: center; padding-top: 20px;">
+            <sl-button id="register_button" type="submit" variant="primary">Register</sl-button>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align: center; padding-top: 10px;">
+            Already have an account?
+            <a href="/CS15Laboratory/source-code/Webpage/login.html">Login</a>
+        </div>
+
+        <!-- Error / Message Area -->
+        <sl-animation id="animation" name="fadeIn" easing="ease-in-out" duration="750" iterations="1">
+            <div id="message" style="text-align: center; color: var(--sl-color-danger-600); font-weight: 600; padding-top: 10px;">
+                <!-- Message will be displayed here -->
+            </div>
+        </sl-animation>
+
+      </div>
+    </nav>
+  </div>
+</body>
+
+</html>

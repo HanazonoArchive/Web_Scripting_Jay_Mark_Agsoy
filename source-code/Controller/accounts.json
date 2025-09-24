@@ -1,0 +1,32 @@
+[
+    {
+        "fullname": "Jay Mark Agsoy",
+        "email": "jagsoy.sanhs@gmail.com",
+        "username": "Archive",
+        "country": "jp",
+        "password": "$2y$10$pJAwJBwonyayAldiJc7SuOmekLqsAqmqlqHR0hN3qqj1ExJK8mHVy",
+        "gender": "male",
+        "hobbies": [
+            "music",
+            "sports",
+            "reading",
+            "gaming"
+        ],
+        "created_at": "2025-09-24 11:07:59"
+    },
+    {
+        "fullname": "Hanazono Archive",
+        "email": "jagsoy.sanhs@gmail.com",
+        "username": "Hanazono",
+        "country": "jp",
+        "password": "$2y$10$cIjjosXw2hF3.qAvRTW07OUut56NaYzHCDZARXG49BVtEBATySeky",
+        "gender": "male",
+        "hobbies": [
+            "music",
+            "sports",
+            "reading",
+            "gaming"
+        ],
+        "created_at": "2025-09-24 11:17:08"
+    }
+]
