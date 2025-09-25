@@ -51,7 +51,7 @@ class createLoginForm {
 
     async sendFormData(formData) {
         try {
-            const response = await fetch("/CS15Laboratory/source-code/Controller/loginController.php", {
+            const response = await fetch("/Web_Scripting_Jay_Mark_Agsoy/source-code/Controller/loginController.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: new URLSearchParams(formData).toString(),
@@ -73,7 +73,7 @@ class createLoginForm {
                 console.log("Login successful.");
 
                 setTimeout(() => { 
-                    window.location.href = "/CS15Laboratory/source-code/Webpage/mainpage.html"; 
+                    window.location.href = "/Web_Scripting_Jay_Mark_Agsoy/source-code/Webpage/mainpage.html"; 
                 }, 3000);
                 
             } else {

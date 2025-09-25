@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        const response = await fetch("/CS15Laboratory/source-code/Controller/mainpageController.php");
+        const response = await fetch("/Web_Scripting_Jay_Mark_Agsoy/source-code/Controller/mainpageController.php");
         const data = await response.json();
 
         if (data.status === "error") {
-            window.location.href = "/CS15Laboratory/source-code/Webpage/login.html";
+            window.location.href = "/Web_Scripting_Jay_Mark_Agsoy/source-code/Webpage/login.html";
             return;
         }
 
