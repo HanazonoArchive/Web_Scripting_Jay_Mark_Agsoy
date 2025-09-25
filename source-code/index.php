@@ -1,4 +1,4 @@
 <?php 
-header("Location: /CS15Laboratory/source-code/Webpage/login.html");
+header("Location: /Web_Scripting_Jay_Mark_Agsoy/source-code/Webpage/login.html");
 exit();
 ?> 
